@@ -1,5 +1,4 @@
-
-#Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет,
+# Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет,
 # является ли этот день выходным.
 def weekend_search(days_of_the_week={1: 'Понедельник',
                                      2: 'Вторник',
@@ -27,6 +26,8 @@ def weekend_search(days_of_the_week={1: 'Понедельник',
 
 
 weekend_search()
+
+
 # Напишите программу для. проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 def Number_of_combinations():
     array = []
@@ -75,7 +76,6 @@ print(truth_test())
 # Напишите программу, которая принимает на вход координаты точки (X и Y),
 # причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
 def plane_quarter_number():
-
     try:
         while True:
             # Координаты точки 'X'
@@ -101,6 +101,7 @@ def plane_quarter_number():
 
 plane_quarter_number()
 
+
 # Напишите программу, которая по заданному номеру четверти,
 # показывает диапазон возможных координат точек в этой четверти (x и y)
 def finding_an_interval_along_a_quarter_plane():
@@ -123,4 +124,17 @@ def finding_an_interval_along_a_quarter_plane():
         print("Вводимый номер четверти должен быть целым числом и равным от 1 до 4")
         print("Повторите ввод данных")
         return finding_an_interval_along_a_quarter_plane()
+
+
 finding_an_interval_along_a_quarter_plane()
+
+
+# Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+def distance_between_two_points(N=2):
+    point_A_coordinate = [random.randint(-10, 10) for _ in range(N)]
+    point_B_coordinate = [random.randint(-10, 10) for _ in range(N)]
+    return round(math.sqrt((point_A_coordinate[0] - point_A_coordinate[1]) ** 2 +
+                           (point_B_coordinate[0] - point_B_coordinate[1]) ** 2), 2)
+
+
+print(distance_between_two_points())
