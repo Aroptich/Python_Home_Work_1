@@ -70,3 +70,33 @@ def truth_test():
 
 
 print(truth_test())
+
+
+# Напишите программу, которая принимает на вход координаты точки (X и Y),
+# причём X ≠ 0 и Y ≠ 0 и выдаёт номер четверти плоскости, в которой находится эта точка.
+def plane_quarter_number():
+
+    try:
+        while True:
+            # Координаты точки 'X'
+            x = float(input('Введите координаты точки X: '))
+            # Координаты точки 'Y'
+            y = float(input('Введите координаты точки Y: '))
+            if x != 0 and y != 0:
+                if x > 0 and y > 0:
+                    print('1')
+                elif x < 0 and y > 0:
+                    print('2')
+                elif x < 0 and y < 0:
+                    print('3')
+                else:
+                    print('4')
+            break
+
+    except ValueError:
+        print('Вводимые значения X и Y должны быть либо целыми числами, либо числами с плавающей точкой!')
+        print('Повторите ввод')
+        return plane_quarter_number()
+
+
+plane_quarter_number()
