@@ -100,3 +100,27 @@ def plane_quarter_number():
 
 
 plane_quarter_number()
+
+# Напишите программу, которая по заданному номеру четверти,
+# показывает диапазон возможных координат точек в этой четверти (x и y)
+def finding_an_interval_along_a_quarter_plane():
+    try:
+
+        number_quater = int(input('Введите номер четверти от 1 до 4: '))
+        if number_quater == 1:
+            print(f'Диапазон возможных координат: X=({0};+{chr(8734)}), Y=({0};+{chr(8734)})')
+        elif number_quater == 2:
+            print(f'Диапазон возможных координат: X=({0};-{chr(8734)}), Y=({0};+{chr(8734)})')
+        elif number_quater == 3:
+            print(f'Диапазон возможных координат: X=({0};-{chr(8734)}), Y=({0};-{chr(8734)})')
+        elif number_quater == 4:
+            print(f'Диапазон возможных координат: X=({0};+{chr(8734)}), Y=({0};-{chr(8734)})')
+        else:
+            print(f'Четверть под номером {number_quater} не существует!')
+            print('Повторите ввод данных')
+            return finding_an_interval_along_a_quarter_plane()
+    except ValueError:
+        print("Вводимый номер четверти должен быть целым числом и равным от 1 до 4")
+        print("Повторите ввод данных")
+        return finding_an_interval_along_a_quarter_plane()
+finding_an_interval_along_a_quarter_plane()
