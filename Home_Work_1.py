@@ -140,8 +140,10 @@
 # print(distance_between_two_points())
 
 
-s = "Hello World"
-a = "Hel"
-if s.startswith(a):
-    print(s.replace(a, ''))
-print(s)
+# s = "Hello World"
+# a = "Hel"
+# if s.startswith(a):
+#     print(s.replace(a, ''))
+# print(s)
+list_1 = [i, i ** 3 for i in range(2, 40) if i % 2 == 0]
+print(list_1)
